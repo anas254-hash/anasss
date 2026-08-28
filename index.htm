@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -25,10 +24,6 @@
 
   <style>
 
-    /* =========================================
-       GENERAL
-    ========================================= */
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -37,1006 +32,330 @@
 
     html,
     body {
-
       width: 100vw;
       height: 100vh;
-
       overflow: hidden;
-
       background: #121212;
-
       display: flex;
       justify-content: center;
       align-items: center;
-
       font-family: 'Montserrat', sans-serif;
     }
 
-
-    /* =========================================
-       BOOK
-    ========================================= */
-
     .book-wrapper {
-
-      width: 96vw;
-      height: 85vh;
-
+      width: 100vw;
+      height: 100vh;
       display: flex;
-
       justify-content: center;
       align-items: center;
     }
 
-
     #book {
-
       position: relative;
-
       margin: auto;
     }
 
-
-    /* =========================================
-       ALL PAGES
-    ========================================= */
-
     .page {
-
       background: #1a1a1a;
-
       display: flex;
-
       flex-direction: column;
-
       align-items: center;
-
       justify-content: center;
-
       text-align: center;
-
       position: relative;
-
       overflow: hidden;
     }
-
-
-    /* =========================================
-       COVER
-    ========================================= */
 
     .wood-cover {
-
       background: #000 !important;
-
       padding: 0 !important;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
     }
 
-
     .cover-frame-img {
-
       width: 100%;
       height: 100%;
-
       object-fit: contain;
-
       display: block;
     }
 
-
-    /* =========================================
-       STATIC IMAGE PAGE
-       s.jpeg
-    ========================================= */
-
     .page-img-box {
-
       width: 100%;
       height: 100%;
-
       position: relative;
-
       background: #1a1a1a;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       overflow: hidden;
     }
 
-
     .page-img {
-
       width: 100%;
       height: 100%;
-
       object-fit: contain;
-
       display: block;
     }
 
-
-    /* =========================================
-       WEEK PAGE
-    ========================================= */
-
     .right-page-content {
-
       width: 100%;
       height: 100%;
-
       display: flex;
-
       flex-direction: column;
-
       align-items: center;
-
       justify-content: center;
-
       position: relative;
-
       background: #161616;
-
-      padding: 20px;
+      padding: 15px;
     }
 
-
     h2.week-title {
-
       color: #e0e0e0;
-
       font-family: 'Cinzel', serif;
-
-      font-size: 1.5rem;
-
+      font-size: 1.3rem;
       letter-spacing: 2px;
-
-      margin-bottom: 20px;
-
+      margin-bottom: 15px;
       font-weight: 600;
     }
 
-
-    /* =========================================
-       PASSWORD
-    ========================================= */
-
     .lock-container {
-
       display: flex;
-
       flex-direction: column;
-
       align-items: center;
-
-      width: 80%;
+      width: 85%;
     }
 
-
     input[type="password"] {
-
       width: 100%;
-
       padding: 10px;
-
       border: 1px solid #444;
-
       background: #222;
-
       color: #fff;
-
       border-radius: 6px;
-
       text-align: center;
-
       font-size: 1rem;
-
-      margin-bottom: 12px;
-
+      margin-bottom: 10px;
       outline: none;
     }
 
-
     input[type="password"]:focus {
-
       border-color: #888;
     }
 
-
     .unlock-btn {
-
       background: #333;
-
       color: #fff;
-
       border: 1px solid #555;
-
-      padding: 8px 24px;
-
+      padding: 8px 20px;
       border-radius: 6px;
-
       cursor: pointer;
-
       font-weight: 600;
-
       font-size: 0.9rem;
-
       letter-spacing: 1px;
-
       transition: 0.3s;
     }
 
-
     .unlock-btn:hover {
-
       background: #444;
     }
 
-
-    /* =========================================
-       MESSAGE IMAGE
-    ========================================= */
-
     .message-img {
-
       display: none;
-
       position: absolute;
-
       top: 0;
       left: 0;
-
       width: 100%;
       height: 100%;
-
       object-fit: contain;
-
       background: #161616;
-
       z-index: 10;
     }
 
-
-    /* =========================================
-       GRADUATION
-    ========================================= */
-
     .graduation-page {
-
       background: #111;
     }
 
-
     .graduation-title {
-
       color: #d4af37 !important;
     }
 
-
     .graduation-btn {
-
       background: #8b0000;
-
       border-color: #d4af37;
     }
 
-
     .graduation-btn:hover {
-
       background: #a00000;
     }
 
-
   </style>
-
 </head>
-
 
 <body>
 
-
   <div class="book-wrapper">
-
     <div id="book">
-
-
-      <!-- ==================================================
-           COVER
-      ================================================== -->
-
+      
+      <!-- COVER -->
       <div class="page wood-cover">
-
-        <img
-          src="a.jpeg"
-          class="cover-frame-img"
-          alt="Cover"
-        >
-
+        <img src="a.jpeg" class="cover-frame-img" alt="Cover">
       </div>
 
-
-      <!-- ==================================================
-           FIRST SPREAD
-
-           LEFT  = s.jpeg
-           RIGHT = WEEK 1
-      ================================================== -->
-
-
+      <!-- FIRST SPREAD: LEFT = s.jpeg, RIGHT = WEEK 1 -->
       <div class="page">
-
         <div class="page-img-box">
-
-          <img
-            src="s.jpeg"
-            class="page-img"
-            alt="Page"
-          >
-
+          <img src="s.jpeg" class="page-img" alt="Page">
         </div>
-
       </div>
-
 
       <div class="page">
-
-        <div
-          class="right-page-content"
-          id="right-content-1"
-        >
-
-          <h2 class="week-title">
-            WEEK 1
-          </h2>
-
-
-          <div
-            class="lock-container"
-            id="lock-box-1"
-          >
-
-            <input
-              type="password"
-              id="pass-1"
-              placeholder="Enter Password"
-              autocomplete="off"
-            >
-
-
-            <button
-              class="unlock-btn"
-              onclick="unlockMsg(1)"
-            >
-              ENTER
-            </button>
-
+        <div class="right-page-content" id="right-content-1">
+          <h2 class="week-title">WEEK 1</h2>
+          <div class="lock-container" id="lock-box-1">
+            <input type="password" id="pass-1" placeholder="Enter Password" autocomplete="off">
+            <button class="unlock-btn" onclick="unlockMsg(1)">ENTER</button>
           </div>
-
-
-          <img
-            src="msg1.jpeg"
-            class="message-img"
-            id="msg-img-1"
-            alt="Message"
-          >
-
+          <img src="msg1.jpeg" class="message-img" id="msg-img-1" alt="Message">
         </div>
-
       </div>
-
 
     </div>
-
   </div>
 
-
-
   <script>
-
-
-    /* ==================================================
-       DATA
-    ================================================== */
-
     const weeksData = [
-
-      {
-        pass: "2027",
-        msgImg: "msg1.jpeg"
-      },
-
-      {
-        pass: "lawyer",
-        msgImg: "msg2.jpeg"
-      },
-
-      {
-        pass: "3",
-        msgImg: "msg3.jpeg"
-      }
-
+      { pass: "2027", msgImg: "msg1.jpeg" },
+      { pass: "lawyer", msgImg: "msg2.jpeg" },
+      { pass: "3", msgImg: "msg3.jpeg" }
     ];
 
-
     const totalWeeks = 40;
-
-
-    const bookContainer =
-      document.getElementById("book");
-
-
-
-    /* ==================================================
-       CREATE WEEK PAGE
-    ================================================== */
+    const bookContainer = document.getElementById("book");
 
     function createWeekPage(weekNumber) {
+      const data = weeksData[weekNumber - 1] || {
+        pass: `week${weekNumber}`,
+        msgImg: `msg${weekNumber}.jpeg`
+      };
 
-
-      const data =
-        weeksData[weekNumber - 1] || {
-
-          pass: `week${weekNumber}`,
-
-          msgImg: `msg${weekNumber}.jpeg`
-
-        };
-
-
-      const page =
-        document.createElement("div");
-
-
+      const page = document.createElement("div");
       page.className = "page";
-
-
       page.innerHTML = `
-
-        <div
-          class="right-page-content"
-          id="right-content-${weekNumber}"
-        >
-
-          <h2 class="week-title">
-            WEEK ${weekNumber}
-          </h2>
-
-
-          <div
-            class="lock-container"
-            id="lock-box-${weekNumber}"
-          >
-
-            <input
-              type="password"
-              id="pass-${weekNumber}"
-              placeholder="Enter Password"
-              autocomplete="off"
-            >
-
-
-            <button
-              class="unlock-btn"
-              onclick="unlockMsg(${weekNumber})"
-            >
-              ENTER
-            </button>
-
+        <div class="right-page-content" id="right-content-${weekNumber}">
+          <h2 class="week-title">WEEK ${weekNumber}</h2>
+          <div class="lock-container" id="lock-box-${weekNumber}">
+            <input type="password" id="pass-${weekNumber}" placeholder="Enter Password" autocomplete="off">
+            <button class="unlock-btn" onclick="unlockMsg(${weekNumber})">ENTER</button>
           </div>
-
-
-          <img
-            src="${data.msgImg}"
-            class="message-img"
-            id="msg-img-${weekNumber}"
-            alt="Message"
-          >
-
+          <img src="${data.msgImg}" class="message-img" id="msg-img-${weekNumber}" alt="Message">
         </div>
-
       `;
-
-
       return page;
-
     }
 
+    for (let i = 2; i <= totalWeeks; i += 2) {
+      bookContainer.appendChild(createWeekPage(i));
+      if (i + 1 <= totalWeeks) {
+        bookContainer.appendChild(createWeekPage(i + 1));
+      }
+    }
 
+    const graduationPage = document.createElement("div");
+    graduationPage.className = "page graduation-page";
+    graduationPage.innerHTML = `
+      <div class="right-page-content" style="background:#111;">
+        <h2 class="week-title graduation-title">GRADUATION 2027</h2>
+        <div class="lock-container" id="lock-box-grad">
+          <input type="password" id="pass-grad" placeholder="Password" autocomplete="off">
+          <button class="unlock-btn graduation-btn" onclick="unlockGrad()">ENTER</button>
+        </div>
+        <img src="msg-grad.jpeg" class="message-img" id="msg-img-grad" alt="Graduation">
+      </div>
+    `;
+    bookContainer.appendChild(graduationPage);
 
-    /* ==================================================
-       CREATE WEEKS
+    window.addEventListener("DOMContentLoaded", function () {
+      const wrapper = document.querySelector(".book-wrapper");
+      
+      // التعديل هنا: جعل مقاسات الكتاب على الموبايل تأخذ الشاشة بشكل كامل ومتناسق
+      const isMobile = window.innerWidth < 768;
+      const bookWidth = isMobile ? Math.floor(wrapper.clientWidth / 2) : Math.floor(wrapper.clientWidth / 2);
+      const bookHeight = wrapper.clientHeight;
 
-       بعد WEEK 1:
-
-       LEFT  = WEEK 2
-       RIGHT = WEEK 3
-
-       LEFT  = WEEK 4
-       RIGHT = WEEK 5
-
-       وهكذا...
-    ================================================== */
-
-
-    for (
-      let i = 2;
-      i <= totalWeeks;
-      i += 2
-    ) {
-
-
-      /* -----------------------------------------------
-         LEFT PAGE
-         WEEK 2 / 4 / 6 / ...
-      ----------------------------------------------- */
-
-      bookContainer.appendChild(
-        createWeekPage(i)
+      const pageFlip = new St.PageFlip(
+        document.getElementById("book"),
+        {
+          width: bookWidth,
+          height: bookHeight,
+          size: "stretch", // تم التغيير إلى stretch ليملأ المساحة المخصصة بالكامل بدون فراغات سوداء
+          minWidth: 150,
+          maxWidth: 1000,
+          minHeight: 250,
+          maxHeight: 1200,
+          showCover: true,
+          flippingTime: 700,
+          maxShadowOpacity: 0.5,
+          drawShadow: true,
+          hoverPageCorner: false,
+          mobileScrollSupport: false,
+          usePortrait: false,
+          startPage: 0
+        }
       );
 
+      pageFlip.loadFromHTML(document.querySelectorAll(".page"));
 
-      /* -----------------------------------------------
-         RIGHT PAGE
-         WEEK 3 / 5 / 7 / ...
-      ----------------------------------------------- */
+      document.querySelectorAll("input, button").forEach(function (element) {
+        ["click", "touchstart", "mousedown", "pointerdown", "keydown"].forEach(eventType => {
+          element.addEventListener(eventType, function (e) {
+            e.stopPropagation();
+          });
+        });
+      });
 
-      if (i + 1 <= totalWeeks) {
+      document.querySelectorAll('input[type="password"]').forEach(function (input) {
+        input.addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            if (input.id === "pass-grad") {
+              unlockGrad();
+            } else {
+              const weekNumber = input.id.replace("pass-", "");
+              unlockMsg(Number(weekNumber));
+            }
+          }
+        });
+      });
+    });
 
-        bookContainer.appendChild(
-          createWeekPage(i + 1)
-        );
+    function unlockMsg(weekNumber) {
+      const input = document.getElementById(`pass-${weekNumber}`);
+      if (!input) return;
+      const data = weeksData[weekNumber - 1] || { pass: `week${weekNumber}` };
 
+      if (input.value === data.pass) {
+        const lockBox = document.getElementById(`lock-box-${weekNumber}`);
+        const message = document.getElementById(`msg-img-${weekNumber}`);
+        if (lockBox) lockBox.style.display = "none";
+        if (message) message.style.display = "block";
+      } else {
+        alert("Wrong Password!");
       }
-
     }
-
-
-
-    /* ==================================================
-       GRADUATION PAGE
-
-       آخر Spread:
-
-       LEFT  = WEEK 40
-       RIGHT = GRADUATION
-    ================================================== */
-
-
-    const graduationPage =
-      document.createElement("div");
-
-
-    graduationPage.className =
-      "page graduation-page";
-
-
-    graduationPage.innerHTML = `
-
-      <div
-        class="right-page-content"
-        style="background:#111;"
-      >
-
-
-        <h2
-          class="week-title graduation-title"
-        >
-          GRADUATION 2027
-        </h2>
-
-
-        <div
-          class="lock-container"
-          id="lock-box-grad"
-        >
-
-
-          <input
-            type="password"
-            id="pass-grad"
-            placeholder="Password"
-            autocomplete="off"
-          >
-
-
-          <button
-            class="unlock-btn graduation-btn"
-            onclick="unlockGrad()"
-          >
-            ENTER
-          </button>
-
-
-        </div>
-
-
-        <img
-          src="msg-grad.jpeg"
-          class="message-img"
-          id="msg-img-grad"
-          alt="Graduation"
-        >
-
-
-      </div>
-
-    `;
-
-
-    bookContainer.appendChild(
-      graduationPage
-    );
-
-
-
-    /* ==================================================
-       PAGE FLIP INITIALIZATION
-    ================================================== */
-
-    window.addEventListener(
-      "DOMContentLoaded",
-      function () {
-
-
-        const wrapper =
-          document.querySelector(".book-wrapper");
-
-
-        const bookWidth =
-          Math.floor(
-            wrapper.clientWidth / 2
-          );
-
-
-        const bookHeight =
-          wrapper.clientHeight;
-
-
-
-        const pageFlip =
-          new St.PageFlip(
-            document.getElementById("book"),
-            {
-
-
-              /* -----------------------------------------
-                 SIZE
-              ----------------------------------------- */
-
-              width: bookWidth,
-
-              height: bookHeight,
-
-              size: "fixed",
-
-
-              minWidth: 200,
-
-              maxWidth: bookWidth,
-
-              minHeight: 300,
-
-              maxHeight: bookHeight,
-
-
-
-              /* -----------------------------------------
-                 COVER
-              ----------------------------------------- */
-
-              showCover: true,
-
-
-
-              /* -----------------------------------------
-                 FLIP
-              ----------------------------------------- */
-
-              flippingTime: 700,
-
-              maxShadowOpacity: 0.5,
-
-              drawShadow: true,
-
-              hoverPageCorner: false,
-
-
-
-              /* -----------------------------------------
-                 MOBILE
-              ----------------------------------------- */
-
-              mobileScrollSupport: false,
-
-              usePortrait: false,
-
-
-              /* -----------------------------------------
-                 START
-              ----------------------------------------- */
-
-              startPage: 0
-
-            }
-          );
-
-
-
-        /* ==================================================
-           LOAD PAGES
-        ================================================== */
-
-        pageFlip.loadFromHTML(
-
-          document.querySelectorAll(".page")
-
-        );
-
-
-
-        /* ==================================================
-           PREVENT PASSWORD INPUT FROM FLIPPING BOOK
-        ================================================== */
-
-        document
-          .querySelectorAll(
-            "input, button"
-          )
-          .forEach(
-            function (element) {
-
-
-              element.addEventListener(
-                "click",
-                function (e) {
-                  e.stopPropagation();
-                }
-              );
-
-
-              element.addEventListener(
-                "touchstart",
-                function (e) {
-                  e.stopPropagation();
-                }
-              );
-
-
-              element.addEventListener(
-                "mousedown",
-                function (e) {
-                  e.stopPropagation();
-                }
-              );
-
-
-              element.addEventListener(
-                "pointerdown",
-                function (e) {
-                  e.stopPropagation();
-                }
-              );
-
-
-              element.addEventListener(
-                "keydown",
-                function (e) {
-                  e.stopPropagation();
-                }
-              );
-
-
-            }
-          );
-
-
-
-        /* ==================================================
-           ENTER KEY FOR ALL PASSWORDS
-        ================================================== */
-
-        document
-          .querySelectorAll(
-            'input[type="password"]'
-          )
-          .forEach(
-            function (input) {
-
-
-              input.addEventListener(
-                "keypress",
-                function (event) {
-
-
-                  if (
-                    event.key === "Enter"
-                  ) {
-
-
-                    if (
-                      input.id === "pass-grad"
-                    ) {
-
-                      unlockGrad();
-
-                    }
-
-                    else {
-
-                      const weekNumber =
-                        input.id
-                          .replace(
-                            "pass-",
-                            ""
-                          );
-
-                      unlockMsg(
-                        Number(weekNumber)
-                      );
-
-                    }
-
-                  }
-
-                }
-              );
-
-            }
-          );
-
-
-      }
-    );
-
-
-
-    /* ==================================================
-       UNLOCK WEEK
-    ================================================== */
-
-    function unlockMsg(
-      weekNumber
-    ) {
-
-
-      const input =
-        document.getElementById(
-          `pass-${weekNumber}`
-        );
-
-
-      if (!input) {
-        return;
-      }
-
-
-      const data =
-        weeksData[weekNumber - 1] || {
-
-          pass: `week${weekNumber}`,
-
-          msgImg: `msg${weekNumber}.jpeg`
-
-        };
-
-
-
-      /* -----------------------------------------------
-         CORRECT PASSWORD
-      ----------------------------------------------- */
-
-      if (
-        input.value === data.pass
-      ) {
-
-
-        const lockBox =
-          document.getElementById(
-            `lock-box-${weekNumber}`
-          );
-
-
-        const message =
-          document.getElementById(
-            `msg-img-${weekNumber}`
-          );
-
-
-        if (lockBox) {
-
-          lockBox.style.display =
-            "none";
-
-        }
-
-
-        if (message) {
-
-          message.style.display =
-            "block";
-
-        }
-
-      }
-
-
-      /* -----------------------------------------------
-         WRONG PASSWORD
-      ----------------------------------------------- */
-
-      else {
-
-        alert(
-          "Wrong Password!"
-        );
-
-      }
-
-    }
-
-
-
-    /* ==================================================
-       UNLOCK GRADUATION
-    ================================================== */
 
     function unlockGrad() {
-
-
-      const input =
-        document.getElementById(
-          "pass-grad"
-        );
-
-
-      if (!input) {
-        return;
+      const input = document.getElementById("pass-grad");
+      if (!input) return;
+      if (input.value === "graduation") {
+        document.getElementById("lock-box-grad").style.display = "none";
+        document.getElementById("msg-img-grad").style.display = "block";
+      } else {
+        alert("Wrong Password!");
       }
-
-
-      if (
-        input.value === "graduation"
-      ) {
-
-
-        document.getElementById(
-          "lock-box-grad"
-        ).style.display =
-          "none";
-
-
-        document.getElementById(
-          "msg-img-grad"
-        ).style.display =
-          "block";
-
-
-      }
-
-
-      else {
-
-        alert(
-          "Wrong Password!"
-        );
-
-      }
-
     }
-
   </script>
-
 
 </body>
 
 </html>
-```
