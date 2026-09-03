@@ -356,7 +356,7 @@
 
       { pass: "2027", msgImg: "msg1.jpeg" },
 
-      { pass: "28", msgImg: "msg2.jpeg" },
+      { pass: "28", msgImg: "msg2.jpeg" , song:"vi.m4a"},
 
       { pass: "3", msgImg: "msg3.jpeg" }
 
@@ -618,6 +618,25 @@
       }
 
     }
+    function unlockMsg(weekNum, correctPass) {
+  const input = document.getElementById(`pass-${weekNum}`);
+  if (input.value === correctPass) {
+    document.getElementById(`lock-box-${weekNum}`).style.display = 'none';
+    document.getElementById(`msg-img-${weekNum}`).style.display = 'block';
+
+    // كود تشغيل الصوت المحدث
+    const data = weeksData[weekNum - 1];
+    if (data && data.song) {
+      if (currentAudio) {
+        currentAudio.pause();
+      }
+      currentAudio = new Audio(data.song);
+      currentAudio.play().catch(e => console.log("Audio play error:", e));
+    }
+  } else {
+    alert('Wrong Password!');
+  }
+}
 
   </script>
 
